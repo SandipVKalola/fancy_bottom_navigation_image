@@ -12,7 +12,7 @@ class TabItem extends StatelessWidget {
   TabItem(
       {@required this.uniqueKey,
         @required this.selected,
-        @required this.iconData,
+        @required this.imageData,
         @required this.title,
         @required this.callbackFunction,
         @required this.textColor,
@@ -20,7 +20,7 @@ class TabItem extends StatelessWidget {
 
   final UniqueKey uniqueKey;
   final String title;
-  final IconData iconData;
+  final String imageData;
   final bool selected;
   final Function(UniqueKey uniqueKey) callbackFunction;
   final Color textColor;
@@ -68,8 +68,10 @@ class TabItem extends StatelessWidget {
                   splashColor: Colors.transparent,
                   padding: EdgeInsets.all(0),
                   alignment: Alignment(0, 0),
-                  icon: Icon(
-                    iconData,
+                  icon: Image.asset(
+                    imageData,
+                    width: 25,
+                    height: 25,
                     color: iconColor,
                   ),
                   onPressed: () {

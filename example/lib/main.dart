@@ -1,6 +1,7 @@
-import 'package:example/second_page.dart';
-import 'package:fancy_bottom_navigation/fancy_bottom_navigation.dart';
+import 'package:fancy_bottom_navigation_image/fancy_bottom_navigation_image.dart';
 import 'package:flutter/material.dart';
+
+import 'second_page.dart';
 
 void main() => runApp(MyApp());
 
@@ -39,22 +40,22 @@ class _MyHomePageState extends State<MyHomePage> {
           child: _getPage(currentPage),
         ),
       ),
-      bottomNavigationBar: FancyBottomNavigation(
+      bottomNavigationBar: FancyBottomNavigationImage(
         tabs: [
           TabData(
-              iconData: Icons.home,
+              imageData: "sydney-opera-house.png",
               title: "Home",
               onclick: () {
-                final FancyBottomNavigationState fState =
+                final FancyBottomNavigationImageState fState =
                     bottomNavigationKey.currentState;
                 fState.setPage(2);
               }),
           TabData(
-              iconData: Icons.search,
+              imageData: "search.png",
               title: "Search",
               onclick: () => Navigator.of(context)
                   .push(MaterialPageRoute(builder: (context) => SecondPage()))),
-          TabData(iconData: Icons.shopping_cart, title: "Basket")
+          TabData(imageData: "user.png", title: "Profile")
         ],
         initialSelection: 1,
         key: bottomNavigationKey,
@@ -97,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
               color: Theme.of(context).accentColor,
               onPressed: () {
-                final FancyBottomNavigationState fState =
+                final FancyBottomNavigationImageState fState =
                     bottomNavigationKey.currentState;
                 fState.setPage(2);
               },
