@@ -1,6 +1,6 @@
 # FancyBottomNavigationImage
 
-![Fancy Gif](https://github.com/SandipVKalola/fancy_bottom_navigation_image/blob/master/fancy_gif.gif "Fancy Gif")
+![Fancy Gif](https://github.com/SandipVKalola/fancy_bottom_navigation_image/blob/master/fancy_bottom_navigation_image.gif "Fancy Gif")
 
 ## Getting Started
 

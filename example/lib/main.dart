@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.blue,
       ),
       home: MyHomePage(),
     );
@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Fancy Bottom Navigation"),
+        title: Text("Fancy Image Bottom Navigation "),
       ),
       body: Container(
         decoration: BoxDecoration(color: Colors.white),
@@ -41,21 +41,27 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       bottomNavigationBar: FancyBottomNavigationImage(
+        circleColor: Color(0xff4268cd),
+        activeIconColor: Color(0xfff49b4d),
+        textColor: Color(0xff4268cd),
+        inactiveIconColor: Colors.grey,
         tabs: [
           TabData(
-              imageData: "sydney-opera-house.png",
-              title: "Home",
-              onclick: () {
-                final FancyBottomNavigationImageState fState =
-                    bottomNavigationKey.currentState;
-                fState.setPage(2);
-              }),
+            imageData: "sydney-opera-house.png",
+            title: "Home",
+          ),
           TabData(
-              imageData: "search.png",
-              title: "Search",
-              onclick: () => Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => SecondPage()))),
-          TabData(imageData: "user.png", title: "Profile")
+            imageData: "search.png",
+            title: "Search",
+          ),
+          TabData(
+            imageData: "user.png",
+            title: "Profile",
+          ),
+          TabData(
+            imageData: "settings.png",
+            title: "Settings",
+          ),
         ],
         initialSelection: 1,
         key: bottomNavigationKey,
@@ -64,11 +70,6 @@ class _MyHomePageState extends State<MyHomePage> {
             currentPage = position;
           });
         },
-      ),
-      drawer: Drawer(
-        child: ListView(
-          children: <Widget>[Text("Hello"), Text("World")],
-        ),
       ),
     );
   }
@@ -80,29 +81,6 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text("This is the home page"),
-            RaisedButton(
-              child: Text(
-                "Start new page",
-                style: TextStyle(color: Colors.white),
-              ),
-              color: Theme.of(context).primaryColor,
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => SecondPage()));
-              },
-            ),
-            RaisedButton(
-              child: Text(
-                "Change to page 3",
-                style: TextStyle(color: Colors.white),
-              ),
-              color: Theme.of(context).accentColor,
-              onPressed: () {
-                final FancyBottomNavigationImageState fState =
-                    bottomNavigationKey.currentState;
-                fState.setPage(2);
-              },
-            )
           ],
         );
       case 1:
@@ -110,32 +88,27 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text("This is the search page"),
-            RaisedButton(
-              child: Text(
-                "Start new page",
-                style: TextStyle(color: Colors.white),
-              ),
-              color: Theme.of(context).primaryColor,
-              onPressed: () {
-                Navigator.of(context).push(
-                    MaterialPageRoute(builder: (context) => SecondPage()));
-              },
-            )
+          ],
+        );
+      case 2:
+        return Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Text("This is the Profile page"),
+          ],
+        );
+      case 3:
+        return Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Text("This is the Settings page"),
           ],
         );
       default:
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text("This is the basket page"),
-            RaisedButton(
-              child: Text(
-                "Start new page",
-                style: TextStyle(color: Colors.white),
-              ),
-              color: Theme.of(context).primaryColor,
-              onPressed: () {},
-            )
+            Text("This is the profile page"),
           ],
         );
     }
