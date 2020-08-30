@@ -7,13 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d49a77d2-32e0-436a-826a-b36d18856957" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fancy_bottom_navigation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/fancy_bottom_navigation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/fancy_bottom_navigation_image.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/fancy_bottom_navigation_image.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/internal/tab_item.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/internal/tab_item.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/paint/half_painter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/paint/half_painter.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,6 +68,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SearchEverywhereHistoryKey" value="scaffold&#9;null&#9;null&#10;floatina&#9;null&#9;null&#10;scaff&#9;null&#9;null" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
@@ -83,7 +84,7 @@
       <recent name="$PROJECT_DIR$/lib/paint" />
     </key>
   </component>
-  <component name="RunManager" selected="Flutter Test.tests in fancy_widget_tests.dart">
+  <component name="RunManager" selected="Flutter.main.dart">
     <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -129,9 +130,9 @@
     <list>
       <item itemvalue="Dart Command Line App.fancy_navigation_tests.dart" />
       <item itemvalue="Flutter.main.dart" />
-      <item itemvalue="Flutter Test.tests in fancy_widget_tests.dart" />
-      <item itemvalue="Flutter Test.Fancy Nav has correct tabs" />
       <item itemvalue="Flutter Test.Clicking icon moves the circle" />
+      <item itemvalue="Flutter Test.Fancy Nav has correct tabs" />
+      <item itemvalue="Flutter Test.tests in fancy_widget_tests.dart" />
     </list>
     <recent_temporary>
       <list>
@@ -186,6 +187,9 @@
     <history-entry file="tests_in_fancy_widget_tests_dart - 2019.01.24 at 12h 53m 33s.xml">
       <configuration name="tests in fancy_widget_tests.dart" configurationId="FlutterTestConfigType" />
     </history-entry>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="205" y="31" width="1022" height="737" key="SettingsEditor" timestamp="1598766576774">

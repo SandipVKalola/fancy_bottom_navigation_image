@@ -16,16 +16,15 @@ const double SHADOW_ALLOWANCE = 30;
 const double BAR_HEIGHT = 60;
 
 class FancyBottomNavigationImage extends StatefulWidget {
-  FancyBottomNavigationImage(
-      {@required this.tabs,
-        @required this.onTabChangedListener,
-        this.key,
-        this.initialSelection = 0,
-        this.circleColor,
-        this.activeIconColor,
-        this.inactiveIconColor,
-        this.textColor,
-        this.barBackgroundColor})
+  FancyBottomNavigationImage({@required this.tabs,
+    @required this.onTabChangedListener,
+    this.key,
+    this.initialSelection = 0,
+    this.circleColor,
+    this.activeIconColor,
+    this.inactiveIconColor,
+    this.textColor,
+    this.barBackgroundColor})
       : assert(onTabChangedListener != null),
         assert(tabs != null),
         assert(tabs.length > 1 && tabs.length < 5);
@@ -42,7 +41,8 @@ class FancyBottomNavigationImage extends StatefulWidget {
   final Key key;
 
   @override
-  FancyBottomNavigationImageState createState() => FancyBottomNavigationImageState();
+  FancyBottomNavigationImageState createState() =>
+      FancyBottomNavigationImageState();
 }
 
 class FancyBottomNavigationImageState extends State<FancyBottomNavigationImage>
@@ -67,29 +67,39 @@ class FancyBottomNavigationImageState extends State<FancyBottomNavigationImage>
     activeIcon = widget.tabs[currentSelected].imageData;
 
     circleColor = (widget.circleColor == null)
-        ? (Theme.of(context).brightness == Brightness.dark)
+        ? (Theme
+        .of(context)
+        .brightness == Brightness.dark)
         ? Colors.white
         : circleColor
         : widget.circleColor;
 
     activeIconColor = (widget.activeIconColor == null)
-        ? (Theme.of(context).brightness == Brightness.dark)
+        ? (Theme
+        .of(context)
+        .brightness == Brightness.dark)
         ? Colors.black54
         : Colors.white
         : widget.activeIconColor;
 
     barBackgroundColor = (widget.barBackgroundColor == null)
-        ? (Theme.of(context).brightness == Brightness.dark)
+        ? (Theme
+        .of(context)
+        .brightness == Brightness.dark)
         ? Color(0xFF212121)
         : Colors.white
         : widget.barBackgroundColor;
     textColor = (widget.textColor == null)
-        ? (Theme.of(context).brightness == Brightness.dark)
+        ? (Theme
+        .of(context)
+        .brightness == Brightness.dark)
         ? Colors.white
         : Colors.black54
         : widget.textColor;
     inactiveIconColor = (widget.inactiveIconColor == null)
-        ? (Theme.of(context).brightness == Brightness.dark)
+        ? (Theme
+        .of(context)
+        .brightness == Brightness.dark)
         ? Colors.white
         : inactiveIconColor
         : widget.inactiveIconColor;
@@ -129,20 +139,21 @@ class FancyBottomNavigationImageState extends State<FancyBottomNavigationImage>
             mainAxisSize: MainAxisSize.max,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: widget.tabs
-                .map((t) => TabItem(
-                uniqueKey: t.key,
-                selected: t.key == widget.tabs[currentSelected].key,
-                imageData: t.imageData,
-                title: t.title,
-                iconColor: inactiveIconColor,
-                textColor: textColor,
-                callbackFunction: (uniqueKey) {
-                  int selected = widget.tabs
-                      .indexWhere((tabData) => tabData.key == uniqueKey);
-                  widget.onTabChangedListener(selected);
-                  _setSelected(uniqueKey);
-                  _initAnimationAndStart(_circleAlignX, 1);
-                }))
+                .map((t) =>
+                TabItem(
+                    uniqueKey: t.key,
+                    selected: t.key == widget.tabs[currentSelected].key,
+                    imageData: t.imageData,
+                    title: t.title,
+                    iconColor: inactiveIconColor,
+                    textColor: textColor,
+                    callbackFunction: (uniqueKey) {
+                      int selected = widget.tabs
+                          .indexWhere((tabData) => tabData.key == uniqueKey);
+                      widget.onTabChangedListener(selected);
+                      _setSelected(uniqueKey);
+                      _initAnimationAndStart(_circleAlignX, 1);
+                    }))
                 .toList(),
           ),
         ),

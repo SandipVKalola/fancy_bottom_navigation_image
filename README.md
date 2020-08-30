@@ -53,19 +53,19 @@ bottomNavigationBar: FancyBottomNavigationImage(
 **key** -> Defaults to null<br/>
 
 ## Theming
-
 The bar will attempt to use your current theme out of the box, however you may want to theme it. Here are the attributes:
 
 
 ![Fancy Theming](https://github.com/SandipVKalola/fancy_bottom_navigation_image/blob/master/fancy_theming.png "Fancy Theming")
 
+## pub.dev Link
+https://pub.dev/packages/fancy_bottom_navigation_image
 
 ## Showcase
 Using this package in a live app, let me know and I'll add you app here.
 
 
 ## Clone
-
 This package is clone of fancy_bottom_navigation plugins and changed for images instead of Icons.<br/>
 https://github.com/tunitowen/fancy_bottom_navigation
 
